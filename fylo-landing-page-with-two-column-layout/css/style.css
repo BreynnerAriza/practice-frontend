@@ -40,6 +40,7 @@ body, html {
 .container{
     width: 80%;
     min-width: 355px;
+    max-width: 1700px;
     margin: auto;
 }
 
@@ -71,6 +72,7 @@ body, html {
 }
 
 .navigation__link {
+    font-family: var(--font-body);
     text-decoration: none;
     color: var(--desatured-blue);
 
@@ -196,9 +198,6 @@ body, html {
     padding-bottom: 5px;
 }
 
-.stay__link-icon {
-}
-
 .stay__card {
     width: 90%;
     background-color: white;
@@ -209,9 +208,6 @@ body, html {
     font-family: var(--font-body);
 }
 
-.stay__card-quote {
-
-}
 .stay__card-paragraph {
     font-size: .7rem;
     line-height: 1.3rem;
@@ -235,8 +231,7 @@ body, html {
     margin-left: 10px;
     font-size: .7rem;
 }
-.stay__test-name {
-}
+
 .stay__test-charge {
     font-size: .5rem;
 }
@@ -334,10 +329,6 @@ body, html {
     list-style: none;
 }
 
-.footer_item {
-   
-}
-
 .footer-item__contact {
     margin-top: 10px;
 }
@@ -356,13 +347,6 @@ body, html {
     gap: 10px;
 }
 
-.footer-media__item {
-    
-}
-.footer-media__link {
-
-}
-
 .footer-media__link img {
     width: 40px; 
     height: 40px;
@@ -370,4 +354,183 @@ body, html {
     padding: 10px;
     filter: brightness(0) invert(1);
     border-radius: 50%;
+}
+
+ 
+@media(min-width:1024px){
+
+    :root{
+        --padding-sections:100px 0px;
+    }
+
+    /*-----------NAVIGATION STYLES----------------*/
+
+    .container{
+        width: 90%;
+    }
+
+    .navigation {
+        padding: var(--padding-sections);
+    }
+
+    .navigation__list {
+        width: 30%;
+        font-size: 1.2rem;
+    }
+
+    .navigation__figure {
+        width: 15%;
+    }
+    
+   /*-----------HEADER STYLES----------------*/
+   
+   .header__container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+   }
+
+   .header__description{
+    flex: 1;
+    text-align: left;
+   }
+
+   .header__title{
+    font-weight: var(--font-header-weigh-bold);
+    font-size: 2.5rem;
+    line-height: 3.5rem;
+   }
+
+   .header__paragraph{
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+   }
+
+   .header__form{
+    flex-direction: row;
+   }
+
+   .header__form-input{
+    width: 60%;
+   }
+   .form__button{
+    flex: 1;
+   }
+
+   .header__figure{
+    width: 60%;
+   }
+
+   /*-----------STAY STYLES----------------*/
+
+   .stay__container{
+    flex-direction: row;
+   }
+
+   .stay__content{
+    margin: 0px;
+    width: 60%;
+   }
+
+   .stay__title{
+    text-align: left;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+   }
+
+   .stay__paragraph{
+    width: 70%;
+    margin-top: 10px;
+    font-size: 1.2rem;
+    color: var(--very-dark-blue);
+   }
+
+   .stay__link{
+    font-family: var(--font-body);
+    font-size: 1.2rem;
+    margin: 20px 0px;
+   }
+
+   .stay__card{
+    width: 50%;
+    margin: 50px 0px;
+    padding: 30px;
+   }
+
+   .stay__card-paragraph{
+    font-size: 1.2rem;
+    line-height: 1.9rem;
+    color: var(--very-dark-blue);
+   }
+
+   .stay__test-figure{
+    width: 15%;
+   }
+
+   .stay__test-data{
+    font-size: 1rem;
+   }
+
+   .stay__test-charge{
+    font-size: .7rem;
+   }
+
+   .stay__figure{
+    flex:1;
+   }
+   
+   /*-----------ACCESS STYLES----------------*/
+   .access__container{
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+   }
+
+   .access__content {
+    text-align: left;
+    width: 40%;
+    }
+
+    .access_title {
+    font-size: 2.3rem;
+    }
+
+    .access__paragraph {
+        font-size: 1.2rem;
+        line-height: 1.7rem;
+    }
+
+    .access_form{
+        margin: 0px;
+        width: 40%;
+        gap: 20px;
+    }
+
+    .access-form__input {
+        font-size: 1rem;
+    }
+
+    .form__access-button{
+        width: fit-content;
+        padding: 15px 30px;
+        font-size: 1rem;
+        border-radius: 5px;
+    }
+
+    /*-----------FOOTER STYLES----------------*/
+    .footer__contac{
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 0px;
+    }
+
+    .footer-item__contact{
+        font-size: 1.2rem;
+    }
+
+    .footer_link{
+        font-size: 1.2rem;
+    }
+
 }
