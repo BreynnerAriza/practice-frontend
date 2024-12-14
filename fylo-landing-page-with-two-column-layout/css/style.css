@@ -21,10 +21,12 @@ body, html {
     --very-dark-blue:hsl(243, 87%, 12%);
     --desatured-blue:hsl(238, 22%, 44%);
     --bright-blue:hsl(224, 93%, 58%);
-    --moderate-cyam:hsl(170, 45%, 43%).;
+    --bright-blue-active:hsl(224, 67%, 50%);
+    --moderate-cyam: hsl(170, 45%, 43%).;
     --light-grayish:hsl(240, 75%, 98%);
     --light-gray:hsl(0, 0%, 75%);
-
+    --green-mental:hsl(157, 95%, 34%);
+    --green-mental-active:hsl(157, 96%, 30%);
     --fontsize:16px;
 
     --font-header: "Raleway", serif;
@@ -192,9 +194,9 @@ body, html {
     gap: 5px;
     margin: 25px auto;
     width: fit-content;
-    color: #04aa6b;
+    color: var(--green-mental);
     text-decoration: none;
-    border-bottom: 1px solid #04aa6b;
+    border-bottom: 1px solid var(--green-mental);
     padding-bottom: 5px;
 }
 
@@ -347,7 +349,7 @@ body, html {
     gap: 10px;
 }
 
-.footer-media__link img {
+.footer-media__link svg {
     width: 40px; 
     height: 40px;
     border: 1px solid white;
@@ -417,6 +419,8 @@ body, html {
    .form__button{
     flex: 1;
    }
+   
+
 
    .header__figure{
     width: 60%;
@@ -451,6 +455,11 @@ body, html {
     font-size: 1.2rem;
     margin: 20px 0px;
    }
+
+   .stay__link:hover{
+    color: var(--green-mental-active);
+   }
+
 
    .stay__card{
     width: 50%;
@@ -531,6 +540,18 @@ body, html {
 
     .footer_link{
         font-size: 1.2rem;
+    }
+
+    .footer-media__link svg:hover{
+
+        border: 1px solid cyan;
+    }
+
+    /*-----------COMMOND STYLES----------------*/
+
+    .form__button:hover, .form__access-button:hover{
+        cursor: pointer;
+        background-color: var(--bright-blue-active);
     }
 
 }
