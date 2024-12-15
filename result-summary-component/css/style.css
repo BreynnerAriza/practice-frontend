@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font);
+}
+
+:root{
+    
+    /* Primary */
+    --light-red: hsl(0, 100%, 67%);
+    --orangey-yellow: hsl(39, 100%, 56%);
+    --green-teal: hsl(166, 100%, 37%);
+    --cobalt-blue: hsl(234, 85%, 45%);
+
+    --light-red-trasnpareci: hsla(0, 100%, 67%, 0.1);
+    --orangey-yellow-trasnpareci: hsla(39, 100%, 56%, 0.1);
+    --green-teal-trasnpareci: hsla(166, 100%, 37%, 0.1);
+    --cobalt-blue-trasnpareci: hsla(234, 85%, 45%, 0.1);
+
+
+
+    /* Gradients */
+    --light-slate-blue-background: hsl(252, 100%, 67%);
+    --light-royal-blue-background: hsl(241, 81%, 54%);
+    --violet-blue-circle: hsla(256, 72%, 46%, 1);
+    --persian-blue-circle: hsla(241, 72%, 46%, 0);
+
+    /* Neutral */
+    --white: hsl(0, 0%, 100%);
+    --pale-blue: hsl(221, 100%, 96%);
+    --light-lavender: hsl(241, 100%, 89%);
+    --dark-gray-blue: hsl(224, 30%, 27%);
+
+    --font: "Hanken Grotesk", sans-serif;
+
+}
+
+.container__main{
+   min-width: 375px;
+}
+
+.container{
+    width: 80%;
+    margin: auto;
+}
+
+.result {
+    width: 100%;
+    padding: 30px 0px;
+    background-image: linear-gradient(to bottom, var(--light-slate-blue-background) 20%, var(--light-royal-blue-background));
+    border-radius: 0px 0px 40px 40px;
+    text-align: center;
+    color: var(--white);
+}
+
+.result__content{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.result__obtenido {
+    margin: auto;
+    width: 50%;
+    aspect-ratio: 1 / 1;
+    padding: 30px;
+    border-radius: 50%;
+    background-image: linear-gradient(to bottom, var(--violet-blue-circle), var(--persian-blue-circle));;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.result__points {
+    font-size: 3rem;
+    font-weight: bold;
+}
+.result__points-tot {
+    font-size: 1rem;
+    display: block;
+}
+.result__description-title {
+    font-size: 2rem;
+}
+.result__description-description {
+    font-size: 1.2rem;
+}
+
+/*SUMMARY STYLE*/
+
+.summary {
+    width: 100%;
+    padding: 30px 0px;
+}
+
+.summary__title {
+    color: var(--dark-gray-blue);
+}
+.summary__list {
+    margin-top: 15px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.summary__item {
+    width: 100%;
+    padding: 20px;
+    background-color: var(--light-slate-blue-background);
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+.summary__category {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    gap: 15px;
+}
+
+.summary__stadistic {
+    color: gray;
+}
+
+.summary__stadistic-bold {
+    color: black;
+    font-weight: bold;
+}
+
+.summary___buttom {
+    color: white;
+    background-color: var(--dark-gray-blue);
+    font-size: 1.5rem;
+    padding: 15px 0px;
+    border-radius: 40px;
+}
+
+.summary__item-reaction{
+    background-color: var(--light-red-trasnpareci);
+}
+
+.summary__item-reaction .summary__category-text{
+    color: var(--light-red);
+}
+
+.summary__item-memory{
+    background-color: var(--orangey-yellow-trasnpareci);
+}
+
+.summary__item-memory .summary__category-text{
+    color: var(--orangey-yellow);
+}
+
+.summary__item-verbal{
+    background-color: var(--green-teal-trasnpareci);
+}
+
+.summary__item-verbal .summary__category-text{
+    color: var(--green-teal);
+}
+
+
+.summary__item-visual{
+    background-color: var(--cobalt-blue-trasnpareci);
+}
+
+.summary__item-verbal .summary__category-text{
+    color: var(--cobalt-blue);
+}
