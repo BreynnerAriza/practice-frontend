@@ -173,3 +173,60 @@
 .summary__item-verbal .summary__category-text{
     color: var(--cobalt-blue);
 }
+
+@media (min-width:1240px){
+    
+    body{
+        width: 100vw;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container__main{
+        display: flex;
+        box-shadow: 2px 4px 20px rgb(214, 214, 214);
+        border-radius: 40px;
+    }
+   
+    .result {
+        border-radius: 40px;
+    }
+
+    .result__description-description {
+        width: 80%;
+        margin: auto;
+    }
+
+    .summary {
+       
+    }
+    .summary__content {
+    }
+    .summary__title {
+    }
+    .summary__list {
+    }
+    .summary__item {
+    }
+    .summary__item-reaction {
+    }
+    .summary__category {
+    }
+    .summary__category-text {
+    }
+    .summary__stadistic {
+    }
+    .summary__stadistic-bold {
+    }
+    .summary__item-memory {
+    }
+    .summary__item-verbal {
+    }
+    .summary__item-visual {
+    }
+    .summary___buttom {
+    }
+    
+}
