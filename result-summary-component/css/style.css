@@ -139,6 +139,7 @@
     font-size: 1.5rem;
     padding: 15px 0px;
     border-radius: 40px;
+    border: none;
 }
 
 .summary__item-reaction{
@@ -199,34 +200,9 @@
         margin: auto;
     }
 
-    .summary {
-       
-    }
-    .summary__content {
-    }
-    .summary__title {
-    }
-    .summary__list {
-    }
-    .summary__item {
-    }
-    .summary__item-reaction {
-    }
-    .summary__category {
-    }
-    .summary__category-text {
-    }
-    .summary__stadistic {
-    }
-    .summary__stadistic-bold {
-    }
-    .summary__item-memory {
-    }
-    .summary__item-verbal {
-    }
-    .summary__item-visual {
-    }
-    .summary___buttom {
+    .summary___buttom:hover {
+        cursor: pointer;
+        background-image: linear-gradient(to bottom, var(--light-slate-blue-background) 20%, var(--light-royal-blue-background));    
     }
     
 }
