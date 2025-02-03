@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+
+:root{
+    /* COLORS VARIABLE */
+    --active-input-border : hsl(249, 99%, 64%) to hsl(278, 94%, 30%);
+    --input-errors: hsl(0, 100%, 66%);
+    --white: hsl(0, 0%, 100%);
+    --light-grayish-violet: hsl(270, 3%, 87%);
+    --dark-grayish-violet: hsl(279, 6%, 55%);
+    --very-dark-violet: hsl(278, 68%, 11%);
+
+    /* FONTS */
+    --font-size-body: 18px
+    --font-weigth: 500;
+    --card-size: 80%;
+    --card-heigth: 180px;
+    --max-width-card: 350px;
+    --min-width:300px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;    
+    text-transform: uppercase;
+    font-weight: var(--font-weigth);
+}
+
+.container{
+    font-family: "Space Grotesk", serif;
+    padding-bottom: 50px;
+}
+
+.card__container {
+    width: 100%;
+    height: 250px;    
+    padding: 20px;
+    position: relative;
+    background-image: url('../images/bg-main-mobile.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.card{
+    width: var(--card-size);
+    max-width: var(--max-width-card);
+    height: var(--card-heigth);
+    min-width: var(--min-width);
+    border-radius: 10px;
+}
+
+.card--front {
+    position: absolute;
+    z-index: 1;
+    bottom: -55px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px;
+    background-image: url('../images/bg-card-front.png');
+    background-position: center;    
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.card__details {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: var(--white);
+}
+
+.card__number {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.card__digit {
+    font-size: 1.2rem;
+}
+
+.card__info {
+    display: flex;
+    font-size: .7rem;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.card--back {   
+    position: absolute;
+    right: 20px;
+    background-image: url('../images/bg-card-back.png');
+    background-position: center;
+    background-size: cover;
+    
+}
+
+.card__cvc {
+   position: absolute;
+   top: 78px;
+   right: 45px;
+}
+
+/* FORMULARIO */
+
+.form {
+    width: 90%;
+    margin: 90px auto 0px;
+}
+
+.completedForm{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.form__container {
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+}
+
+.form__label {
+    font-size: .8rem;
+    display: block;
+    color: var(--very-dark-violet);
+    margin: 10px 0px;
+}
+
+.form__input {
+    width: 100%;
+    display: block;
+    padding: 10px;
+    border: 1px solid var(--light-grayish-violet);
+    border-radius: 5px;
+    color: var(--very-dark-violet);
+    font-weight: bold;
+}
+
+.form__input--invalid{
+    outline: 1px solid red;
+}
+
+.form__input:focus{
+    outline: 1px solid var(--very-dark-violet);
+}
+
+.messageError{
+    text-transform: capitalize;
+    font-size: .7rem;
+    color: red;
+    opacity: 0;
+}
+.messageError-visible{
+    opacity: 1;
+}
+
+.form__row {
+    display: flex;
+    gap: 10px;
+}
+
+.form__date-container {
+    display: flex;
+    gap: 10px;
+}
+
+.form__button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background-color: var(--very-dark-violet);
+    color: var(--white);
+    border-radius: 10px;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+
+
+@media (width >= 1024px){
+
+    .container{
+        display: flex;
+        flex-direction: row;       
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;      
+        overflow: hidden;
+        padding-bottom: 0px;
+    }
+
+    .card__container {
+        width: 25%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .card--front {
+        position: relative;
+        bottom: 0px;
+        margin-left: 250px;
+    }
+
+    .card--back {
+        position: relative;
+        right: 0px;
+        margin-left: 350px;
+    }
+
+    .form {
+        width: 30%;
+    }
+    
+}

@@ -1,94 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Otp code</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <style>
-        *{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: "Raleway", serif;
-        }
-        :root{
-            --orange:#fb8500;
-        }
-        body{
-            display: flex;    
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-        }
-
-        .container{
-            width: 35%;
-            min-width: 350px;
-            max-width: 650px;
-            box-shadow: 0px 0px 10px rgba(128, 128, 128, 0.568);            
-        }
-
-        .container__header{
-            padding: 15px;
-            background-color: var(--orange);
-        }
-
-        .container__title{
-            text-align: center;
-            color: white;
-            text-transform: uppercase;
-            font-size: 2.5rem;
-        }
-
-        .container__content{
-            padding: 20px;
-            text-align: center;
-            font-size: 1.25rem;
-            line-height: 1.6rem;
-            color: rgb(94, 93, 93);
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-
-        .container__figure{
-            margin-top: 20px;
-            width: 100%;       
-            margin-bottom: 20px;    
-        }
-
-        .container__img{
-            display: block;
-            margin: auto;
-            width: 50%;
-            max-width: 200px;
-        }
-
-        .container__opt-code{
-            font-family: Arial, Helvetica, sans-serif;
-            margin: 20 px 0px;            
-            font-size: 3.5rem;
-            color: var(--orange);
-            font-weight: bold;
-            letter-spacing: 15px;
-        }
-
-        .info{
-            font-weight: bold;
-            color: var(--orange);
-        }
-
-    </style>
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Otp code</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: "Raleway", serif;
+            }
+            :root{
+                --orange:#fb8500;
+            }
+            body{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 100vh;
+            }
+    
+            .container{
+                width: 35%;
+                min-width: 350px;
+                max-width: 650px;
+                box-shadow: 0px 0px 10px rgba(128, 128, 128, 0.568);
+            }
+    
+            .container__header{
+                padding: 15px;
+                background-color: var(--orange);
+            }
+    
+            .container__title{
+                text-align: center;
+                color: white;
+                text-transform: uppercase;
+                font-size: 2.5rem;
+            }
+    
+            .container__content{
+                padding: 20px;
+                text-align: center;
+                font-size: 1.25rem;
+                line-height: 1.6rem;
+                color: rgb(94, 93, 93);
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+            }
+    
+            .container__figure{
+                margin-top: 20px;
+                width: 100%;
+                margin-bottom: 20px;
+            }
+    
+            .container__img{
+                display: block;
+                margin: auto;
+                width: 50%;
+                max-width: 200px;
+            }
+    
+            .container__opt-code{
+                font-family: Arial, Helvetica, sans-serif;
+                margin: 20px 0px;
+                font-size: 3.5rem;
+                color: var(--orange);
+                font-weight: bold;
+                letter-spacing: 15px;
+            }
+    
+            .info{
+                font-weight: bold;
+                color: var(--orange);
+            }
+    
+        </style>
+    </head>
+    <body>
     <main class="container">
         <header class="container__header">
             <h2 class="container__title">
                 ¡ Bienvenido !
-            </h2>            
+            </h2>
         </header>
         <div class="container__content">
             <figure class="container__figure">
@@ -98,7 +98,7 @@
                 Espero que este mensaje te encuentre bien. Como parte de nuestra seguridad adicional, hemos generado un
                 código OTP (One Time Password) <span class="info">exclusivamente para ti</span>. El código es:
             </p>
-            <p class="container__opt-code">1234</p>
+            <p class="container__opt-code" th:text="${otpCode}">1234</p>
             <p class="container__message">
                 Por favor, utilízalo dentro de los próximos <span class="info">10 minutos</span> para completar tu proceso
                 de registro. Si no has solicitado este código o tienes alguna pregunta, por favor contáctanos de inmediato.
@@ -106,5 +106,5 @@
             <p>Atentamente <br> <span class="info">Ocaña Gourmet</span></p>
         </div>
     </main>
-</body>
-</html>
+    </body>
+    </html>

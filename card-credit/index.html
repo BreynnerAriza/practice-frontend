@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Interactive card details form</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <div class="card__container">
+        <div class="card card--front">
+          <figure class="card__logo">
+            <img src="images/card-logo.svg" alt="Logo" class="card__logo-image" />
+          </figure>
+          <div class="card__details">
+            <div class="card__number">
+              <p class="card__digit">0000</p>
+              <p class="card__digit">0000</p>
+              <p class="card__digit">0000</p>
+              <p class="card__digit">0000</p>
+            </div>
+            <div class="card__info">
+              <p class="card__holder-name" id="nameExample">Nombre Ejemplo</p>
+              <div class="card__expiration">
+                <span class="card__expiration-month" id="monthExample">09</span>
+                /
+                <span class="card__expiration-year" id="yearExample">20</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card card--back">
+          <div class="card__stripe"></div>
+          <p class="card__cvc" id="cvcExample">990</p>
+        </div>
+      </div>
+
+      <div class="form" id="formContainer">
+        <form action="#" class="form__container" id="form">
+          <div class="form__group">
+            <label for="cardholder-name" class="form__label">Cardholder Name</label>
+            <input type="text" name="cardholder_name" id="cardholder-name" class="form__input" placeholder="e.g. Jane Appleseed">
+            <span class="messageError" id="errorCardName">Mensaje validacion</span>
+          </div>
+          <div class="form__group">
+            <label for="card-number" class="form__label">Card Number</label>
+            <input type="text" name="card_number" id="card-number" class="form__input" placeholder="e.g. 1234 5678 9123 0000">
+            <span class="messageError" id="errorCardNumber">Mensaje validacion</span>
+          </div>
+          <div class="form__row">
+            <div class="form__group form__group--small">
+              <label for="input-month" class="form__label">Exp. Date (MM/YY)</label>
+              <div class="form__date-container">
+                <input type="text" placeholder="MM" id="input-month" name="input_month" class="form__input form__input--small">
+                <input type="text" placeholder="YY" id="input-year" name="input_year" class="form__input form__input--small">
+              </div>
+              <span class="messageError" id="errorDate">Mensaje validacion</span>
+            </div>
+            <div class="form__group form__group--small">
+              <label for="input-cvc" class="form__label">CVC</label>
+              <input type="text" class="form__input form__input--small" id="input-cvc" name="input_cvc" placeholder="e.g. 123">
+              <span class="messageError" id="errorCvc">Mensaje validacion</span>
+            </div>
+          </div>
+          <button type="submit" class="form__button">Confirm</button>
+        </form>
+        
+
+      </div>
+    </main>
+
+    <script src="js/app.js"></script>
+  </body>
+</html>
