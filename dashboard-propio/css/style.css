@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    /* ==== ROOT ===== */
+    --dashboard-color: #d4bbfc;
+    --sidebar-color: #fbfaff;
+    --sidebar-color-dark: #f0edf8;
+    --hover-color: #9667e0;
+    --white-color: #FFF;
+    --text-color: #707070;
+    --circle-min-color: #9567e094;
+
+
+    /* === DURACION DE TRNSICCIONES === */
+    --tran03: all 0.3s ease;
+    --tran05: all 0.5s ease;
+}   
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Raleway", serif;
+    /* outline: 1px solid red; */
+}
+
+body{
+    background-color: var(--dashboard-color);
+}
+
+body.dark{
+    --dashboard-color: #1e1e2e;  /* Fondo oscuro principal */
+    --sidebar-color: #252436;  /* Color del sidebar oscuro */
+    --sidebar-color-dark: #1a1926;  /* Un tono más oscuro para el sidebar */
+    --hover-color: #7d5df5;  /* Color de hover con buen contraste */
+    --white-color: #e0e0e0;  /* Blanco suavizado */
+    --text-color: #b0b0b0;  /* Texto gris claro */
+    --circle-min-color: #403b61;  /* Un morado oscuro translúcido */
+}
+
+/* ==== ESTILOS REUTILIZADOS ==== */
+.icon{
+    min-width: 60px;
+    font-size: 1.2rem;
+    color: var(--text-color);
+    text-align: center;
+    transition: var(--tran03);    
+}
+
+.text{
+    opacity: 1;    
+    white-space: nowrap;
+}
+
+
+.sidebar.sidebar--close .text{
+    opacity: 0;
+}
+
+/* SIDEBAR */
+.sidebar {
+    position: relative;
+    width: 250px;
+    height: 100vh;
+    padding: 10px 10px;
+    background-color: var(--sidebar-color);       
+    display: flex;
+    flex-direction: column;    
+    transition: var(--tran05);
+}
+.sidebar.sidebar--close{
+    width: 80px;
+}
+
+
+
+/* SIDEBAR HEADER */
+
+.sidebar__header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.sidebar__figure {
+    width: 40px;
+    height: 40px;    
+    min-width: 40px;    
+}
+
+.sidebar__figure img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    transition: var(--tran05);
+}
+
+.sidebar.sidebar--close .sidebar__header img{
+    margin-left: 10px;
+
+}
+
+.sidebar__title {
+    margin-top: 10px;
+    font-size: 1rem;
+    text-align: center;
+    color: var(--text-color);    
+}
+
+.toogle-open{
+    position: absolute;
+    right: -25px;
+    font-size: 1.4rem;
+    width: 25px;
+    height: 25px;
+    background-color: var(--hover-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--white-color);
+    transition: var(--tran05);
+    transform: rotate(180deg);
+}
+
+.toogle-open:hover{
+    cursor: pointer;
+}
+
+.sidebar.sidebar.sidebar--close .toogle-open{
+    transform: rotate(0deg);
+}
+
+/* SIDEBAR BODY  */
+.sidebar__body {    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;    
+    margin-top: 10px;
+
+}
+
+.sidebar__item {
+    width: 100%;
+    height: 50px;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    border-radius: 3px;
+    transition: var(--tran03);
+}
+.sidebar__item:hover{
+    cursor: pointer;
+    background-color: var(--hover-color);
+}
+
+.sidebar__option {
+    font-weight: 600;
+    color: var(--text-color);
+    transition: var(--tran03);    
+}
+
+
+.sidebar__item:hover .sidebar__option,
+.sidebar__item:hover .icon{
+    color: var(--white-color);
+}
+
+
+/* ====  CIRCULOS  ==== */
+.circle{
+    position: absolute;
+    bottom: -62.5px;
+    left: -62.5px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;    
+    background-color: var(--circle-min-color);
+}
+
+.circle-min{
+    bottom: -62.5px;
+    left: -62.5px;
+}
+.circle-max{
+    left: 0px;
+    bottom: -125px;
+}
+
+/* === TOGLE THEME === */
+
+.sidebar__item.theme{
+    position: relative;
+    background-color: var(--sidebar-color-dark);
+
+}
+
+.sidebar__item.theme:hover{
+    background-color: var(--sidebar-color-dark);
+}
+
+.sidebar__item.theme:hover .text,
+.sidebar__item.theme:hover .icon{
+    color: var(--text-color);
+}
+
+
+.toggle-theme{
+    height: 22px;
+    width: 44px;
+    border-radius: 25px;
+    background-color: var(--text-color);
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.toggle-theme::before{
+    position: absolute;
+    content: "";
+    width: 18px;
+    height: 18px;
+    background-color: var(--white-color);
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 5px;
+    transition: var(--tran03);
+}
+
+body.dark .toggle-theme::before{
+    left: 23px;
+}
